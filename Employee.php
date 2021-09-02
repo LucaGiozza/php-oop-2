@@ -2,12 +2,19 @@
 
 require_once 'Utente.php';
 
+// importo il trait
+require_once 'Note.php';
+
+
 // estendo la classe utente
 // la classe Employee è la classe figlia
 
 class Employee extends Utente{
 
     public $cartaFedeltà;
+
+//   utilizzo il trait
+    use Note;
 
     public function setCartaFedeltà($_cartaFedeltà){
         $this->cartaFedeltà = $_cartaFedeltà;

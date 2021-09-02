@@ -8,7 +8,9 @@ $cliente->setSconto(2);
 
 $clientePremium = new Employee('Alessia', 'Mocellini');
 $clientePremium->setCartaFedeltà(5);
- $clientePremium->setSconto(5);
+$clientePremium->setSconto(5);
+
+$clientePremium->setNote('14252615');
 
 
 ?>
@@ -24,12 +26,16 @@ $clientePremium->setCartaFedeltà(5);
 <body>
 
 <h2><?php echo $cliente->getNameSurname() ?></h2>
-<h2><?php echo 'Hai uno sconto del:' . ' ' .   $cliente->getSconto() . '%' ?></h2>
+<p><?php echo 'Hai uno sconto del:' . ' ' .   $cliente->getSconto() . '%' ?></p>
+
+<hr>
 
 
 <h2><?php echo $clientePremium->getNameSurname() ?></h2>
 <p>  Carta Fedeltà : <?php  echo $clientePremium->getCartaFedeltà() ?></p>
 <p><?php echo 'Hai quindi uno sconto del' . ' ' . $clientePremium->getSconto() . '%' ?> </p>
+
+<p><?php echo 'Numero Aquisto : ' . ' ' . $clientePremium->getNote() ?> </p>
 
 
 </body>
