@@ -26,9 +26,9 @@ Provate a far interagire tra di loro gli oggetti: ad esempio, l'utente dello sho
      
    }
 
-   public function setSconto($eta){
-     if($eta > 60){
-       $this->sconto = 30;
+   public function setSconto($carta){
+     if($carta < 4){
+       $this->sconto = 5;
 
      }
 

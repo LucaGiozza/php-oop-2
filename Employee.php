@@ -17,5 +17,15 @@ class Employee extends Utente{
         return $this->cartaFedeltà;
     }
 
+    // utilizzo polimorfismo
+    public function setSconto($carta) {
+        if($carta < 4 ){
+            $this->sconto = 5;
+        }else{
+            $this->sconto = $this->cartaFedeltà * 4;
+        }
+
+    }
+
 
 }

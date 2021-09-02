@@ -4,10 +4,11 @@ require_once 'Utente.php';
 require_once 'Employee.php';
 
 $cliente = new Utente('Luca', 'Giozza');
-$cliente->setSconto(80);
+$cliente->setSconto(2);
 
 $clientePremium = new Employee('Alessia', 'Mocellini');
-$clientePremium->setCartaFedeltà(3)
+$clientePremium->setCartaFedeltà(5);
+ $clientePremium->setSconto(5);
 
 
 ?>
@@ -28,6 +29,7 @@ $clientePremium->setCartaFedeltà(3)
 
 <h2><?php echo $clientePremium->getNameSurname() ?></h2>
 <p>  Carta Fedeltà : <?php  echo $clientePremium->getCartaFedeltà() ?></p>
+<p><?php echo 'Hai quindi uno sconto del' . ' ' . $clientePremium->getSconto() . '%' ?> </p>
 
 
 </body>
